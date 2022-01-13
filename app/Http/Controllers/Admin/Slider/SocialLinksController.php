@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Slider;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\SocialLink;
+use Illuminate\Http\Request;
 
-class SliderController extends Controller
+class SocialLinksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,6 @@ class SliderController extends Controller
     public function index()
     {
         //
-        return view('admin.slider.all');
     }
 
     /**
@@ -26,8 +26,6 @@ class SliderController extends Controller
     public function create()
     {
         //
-        return view('admin.slider.create');
-
     }
 
     /**
@@ -39,7 +37,13 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         //
-       
+        SocialLink::create([
+            'name' => $request->name ,
+            'icon' => $request->icon ,
+            'link' => $request->link 
+        ]);
+
+        return redirect()->back();
     }
 
     /**

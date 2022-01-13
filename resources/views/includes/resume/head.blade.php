@@ -21,8 +21,10 @@
   <link href="{{URL::asset("resume_end_user/vendor/boxicons/css/boxicons.min.css")}}" rel="stylesheet">
   <link href="{{URL::asset("resume_end_user/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet">
   <link href="{{URL::asset("resume_end_user/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet">
+  <link href="{{URL::asset("resume_end_user/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="{{URL::asset("resume_end_user/css/all.min.css")}}" rel="stylesheet">
   <link href="{{URL::asset("resume_end_user/css/style.css")}}" rel="stylesheet">
 
   <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />

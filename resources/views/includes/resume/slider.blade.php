@@ -8,7 +8,7 @@
         <div class="social-links">
             @foreach ($socialLinks as $socialLink)
             <a href="{{$socialLink->link}}" class="{{$socialLink->name}}" target="_blank" title="{{$socialLink->name}}">
-                {{$socialLink->icon}}
+                {!! $socialLink->icon !!}
             </a>
             @endforeach
 

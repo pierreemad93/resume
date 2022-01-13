@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Slider\JobsController;
+use App\Http\Controllers\Admin\Slider\SocialLinksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class , 'index'])->name('admin.dashboard');
     Route::resources([
         'slider' => SliderController::class,
+        'sociallinks' => SocialLinksController::class,
+        'jobs' => JobsController::class,
+
     ]);
     
 });

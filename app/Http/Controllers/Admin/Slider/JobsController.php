@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\Admin\Slider;
+use App\Models\Job;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class SliderController extends Controller
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,6 @@ class SliderController extends Controller
     public function index()
     {
         //
-        return view('admin.slider.all');
     }
 
     /**
@@ -26,8 +25,7 @@ class SliderController extends Controller
     public function create()
     {
         //
-        return view('admin.slider.create');
-
+        
     }
 
     /**
@@ -39,7 +37,10 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         //
-       
+        Job::create([
+            'name' => $request->name ,
+        ]);
+        return redirect()->back();
     }
 
     /**

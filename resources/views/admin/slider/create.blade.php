@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <form method="post" action="{{route('slider.store')}}" role="form" class="form-horizontal form-groups-bordered">
+                    <form method="post" action="{{route('sociallinks.store')}}" role="form" class="form-horizontal form-groups-bordered">
                        @csrf
                         <div class="form-group"> 
                             <label  class="col-sm-3 control-label">Name</label>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <form method="post" action="{{route('slider.store')}}" role="form" class="form-horizontal form-groups-bordered">
+                    <form method="post" action="{{route('jobs.store')}}" role="form" class="form-horizontal form-groups-bordered">
                        @csrf
                         <div class="form-group"> 
                             <label  class="col-sm-3 control-label">Name</label>
