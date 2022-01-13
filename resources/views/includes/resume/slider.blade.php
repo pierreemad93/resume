@@ -2,14 +2,16 @@
  <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <h1>Pierre Emad</h1>
-        <p>I'm <span class="typed" data-typed-items="Fullstack developer, Instructor, Freelancer"></span>
+        <p>I'm 
+            <span class="typed" data-typed-items="@foreach($jobs as $job) {{$job->name}}, @endforeach"></span>
         </p>
         <div class="social-links">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            @foreach ($socialLinks as $socialLink)
+            <a href="{{$socialLink->link}}" class="{{$socialLink->name}}" target="_blank" title="{{$socialLink->name}}">
+                {{$socialLink->icon}}
+            </a>
+            @endforeach
+
         </div>
     </div>
 </section><!-- End Hero -->

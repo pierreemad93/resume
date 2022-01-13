@@ -2,6 +2,7 @@
 <html lang="en">
     @include('includes.resume.head')
 <body>
+   
     @include('includes.resume.navbar')
     @include('includes.resume.slider')
 
@@ -17,6 +18,7 @@
 
 
     @include('includes.resume.scripts')
+
 </body>
 
 </html>

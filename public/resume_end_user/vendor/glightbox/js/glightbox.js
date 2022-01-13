@@ -379,9 +379,9 @@
       }, timeout);
     }
   }
-  function injectAssets(url, waitFor, callback) {
+  function injectadmin(url, waitFor, callback) {
     if (isNil(url)) {
-      console.error('Inject assets error');
+      console.error('Inject admin error');
       return;
     }
 
@@ -664,15 +664,15 @@
     return angle * 180 / Math.PI;
   }
 
-  var EventsHandlerAdmin = function () {
-    function EventsHandlerAdmin(el) {
-      _classCallCheck(this, EventsHandlerAdmin);
+  var EventsHandleradmin = function () {
+    function EventsHandleradmin(el) {
+      _classCallCheck(this, EventsHandleradmin);
 
       this.handlers = [];
       this.el = el;
     }
 
-    _createClass(EventsHandlerAdmin, [{
+    _createClass(EventsHandleradmin, [{
       key: "add",
       value: function add(handler) {
         this.handlers.push(handler);
@@ -703,13 +703,13 @@
       }
     }]);
 
-    return EventsHandlerAdmin;
+    return EventsHandleradmin;
   }();
 
   function wrapFunc(el, handler) {
-    var EventshandlerAdmin = new EventsHandlerAdmin(el);
-    EventshandlerAdmin.add(handler);
-    return EventshandlerAdmin;
+    var Eventshandleradmin = new EventsHandleradmin(el);
+    Eventshandleradmin.add(handler);
+    return Eventshandleradmin;
   }
 
   var TouchEvents = function () {
@@ -1782,7 +1782,7 @@
     addClass(slideContainer, 'gvideo-container');
     slideMedia.insertBefore(createHTML('<div class="gvideo-wrapper"></div>'), slideMedia.firstChild);
     var videoWrapper = slide.querySelector('.gvideo-wrapper');
-    injectAssets(this.settings.plyr.css, 'Plyr');
+    injectadmin(this.settings.plyr.css, 'Plyr');
     var url = data.href;
     var protocol = location.protocol.replace(':', '');
     var videoSource = '';
@@ -1794,7 +1794,7 @@
     }
 
     slideMedia.style.maxWidth = data.width;
-    injectAssets(this.settings.plyr.js, 'Plyr', function () {
+    injectadmin(this.settings.plyr.js, 'Plyr', function () {
       if (url.match(/vimeo\.com\/([0-9]*)/)) {
         var vimeoID = /vimeo.*\/(\d+)/i.exec(url);
         videoSource = 'vimeo';
