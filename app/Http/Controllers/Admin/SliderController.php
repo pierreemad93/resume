@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Job;
+use App\Models\SocialLink;
 
 class SliderController extends Controller
 {
@@ -15,7 +17,9 @@ class SliderController extends Controller
     public function index()
     {
         //
-        return view('admin.slider.all');
+        $jobs= Job::all();
+        $socialLinks = SocialLink::all();
+        return view('admin.slider.all' , compact('jobs' ,'socialLinks'));
     }
 
     /**
