@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Slider\JobsController;
+use App\Http\Controllers\Admin\Resume\ResmueTopicController;
 use App\Http\Controllers\Admin\Slider\SocialLinksController;
 
 /*
@@ -23,6 +25,7 @@ Route::prefix('admin')->group(function () {
         'slider' => SliderController::class,
         'sociallinks' => SocialLinksController::class,
         'jobs' => JobsController::class,
+        'resume/topic'=>ResmueTopicController::class
 
     ]);
     

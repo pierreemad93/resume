@@ -16,25 +16,43 @@
         </header>
         <ul id="main-menu" class="main-menu">
             <li>
-                <a href="{{route('admin.dashboard')}}">
+                <a href="{{ route('admin.dashboard') }}">
                     <i class="entypo-gauge"></i>
                     <span class="title">Dashboard</span>
                 </a>
             </li>
 
             <li>
-                <a href="frontend/main/index.html">
+                <a href="{{ route('resume.enduser') }}" target="_blank">
                     <i class="entypo-monitor"></i>
                     <span class="title">Frontend</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('slider.index')}}">
+                <a href="{{ route('slider.index') }}">
                     <i class="entypo-monitor"></i>
                     <span class="title">Slider</span>
                 </a>
             </li>
-            
+            <li class="has-sub">
+                <a href="">
+                    <i class="entypo-flow-tree"></i>
+                    <span class="title">Resume</span></a>
+                <ul>
+                    <li>
+                        <a href="{{route('topic.index')}}">
+                            <i class="entypo-flow-line"></i>
+                            <span class="title">Topic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#">
+                            <i class="entypo-flow-line"></i>
+                            <span class="title">Details</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="has-sub">
                 <a href="index.html#">
                     <i class="entypo-flow-tree"></i>
